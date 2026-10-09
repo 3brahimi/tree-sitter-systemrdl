@@ -1,0 +1,30 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [ "setuptools>=62.4.0", "wheel" ]
+
+[project]
+authors = [ { name = "Aliaksei Chapyzhenka" } ]
+classifiers = [
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Compilers",
+  "Topic :: Text Processing :: Linguistic",
+  "Typing :: Typed",
+]
+description = "SystemRDL 2.0 grammar for tree-sitter"
+keywords = [ "incremental", "parsing", "tree-sitter", "systemrdl" ]
+license.text = "MIT"
+name = "tree-sitter-systemrdl"
+readme = "README.md"
+requires-python = ">=3.10"
+version = "0.9.0"
+
+[project.urls]
+Homepage = "https://github.com/3brahimi/tree-sitter-systemrdl"
+
+[project.optional-dependencies]
+core = [ "tree-sitter>=0.25" ]
+test = [ "pytest", "tree-sitter>=0.25" ]
+
+[tool.cibuildwheel]
+build = "cp310-*"
+build-frontend = "build"

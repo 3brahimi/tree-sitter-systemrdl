@@ -453,7 +453,7 @@ const rules = {
 
 };
 
-module.exports = grammar({
+export default grammar({
   name: 'systemrdl',
   word: $ => $.id,
   rules: rules,

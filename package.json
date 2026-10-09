@@ -9,6 +9,7 @@
     "prepare": "node bin/install.js",
     "test": "tree-sitter test"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SystemRDL/tree-sitter-systemrdl.git"
