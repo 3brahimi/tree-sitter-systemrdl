@@ -1,0 +1,159 @@
+================================================================================
+Binary operator precedence
+================================================================================
+
+addrmap top { p = 1 + 2 * 3 ** 2; q = a && b || c; };
+
+--------------------------------------------------------------------------------
+
+(root
+  (component_def
+    (component_named_def
+      (component_type
+        (component_type_primary))
+      (id)
+      (component_body
+        (local_property_assignment
+          (normal_prop_assign
+            (id)
+            (binary_expr
+              (number)
+              (binary_expr
+                (number)
+                (binary_expr
+                  (number)
+                  (number))))))
+        (local_property_assignment
+          (normal_prop_assign
+            (id)
+            (binary_expr
+              (binary_expr
+                (instance_ref
+                  (instance_ref_element
+                    (id)))
+                (instance_ref
+                  (instance_ref_element
+                    (id))))
+              (instance_ref
+                (instance_ref_element
+                  (id))))))))))
+
+================================================================================
+Ternary is right-associative and loosest
+================================================================================
+
+addrmap top { p = a || b ? c : d ? e : f; };
+
+--------------------------------------------------------------------------------
+
+(root
+  (component_def
+    (component_named_def
+      (component_type
+        (component_type_primary))
+      (id)
+      (component_body
+        (local_property_assignment
+          (normal_prop_assign
+            (id)
+            (ternary_expr
+              (binary_expr
+                (instance_ref
+                  (instance_ref_element
+                    (id)))
+                (instance_ref
+                  (instance_ref_element
+                    (id))))
+              (instance_ref
+                (instance_ref_element
+                  (id)))
+              (ternary_expr
+                (instance_ref
+                  (instance_ref_element
+                    (id)))
+                (instance_ref
+                  (instance_ref_element
+                    (id)))
+                (instance_ref
+                  (instance_ref_element
+                    (id)))))))))))
+
+================================================================================
+Unary operators bind to a primary only
+================================================================================
+
+addrmap top { p = -a ** 2; q = ~&a | ^~b; };
+
+--------------------------------------------------------------------------------
+
+(root
+  (component_def
+    (component_named_def
+      (component_type
+        (component_type_primary))
+      (id)
+      (component_body
+        (local_property_assignment
+          (normal_prop_assign
+            (id)
+            (binary_expr
+              (unary_expr
+                (instance_ref
+                  (instance_ref_element
+                    (id))))
+              (number))))
+        (local_property_assignment
+          (normal_prop_assign
+            (id)
+            (binary_expr
+              (unary_expr
+                (instance_ref
+                  (instance_ref_element
+                    (id))))
+              (unary_expr
+                (instance_ref
+                  (instance_ref_element
+                    (id)))))))))))
+
+================================================================================
+Casts, concatenation and replication
+================================================================================
+
+addrmap top { p = boolean'(x); q = 8'(x); x = {2{a, b}}; };
+
+--------------------------------------------------------------------------------
+
+(root
+  (component_def
+    (component_named_def
+      (component_type
+        (component_type_primary))
+      (id)
+      (component_body
+        (local_property_assignment
+          (normal_prop_assign
+            (id)
+            (cast_type
+              (instance_ref
+                (instance_ref_element
+                  (id))))))
+        (local_property_assignment
+          (normal_prop_assign
+            (id)
+            (cast_width
+              (number)
+              (instance_ref
+                (instance_ref_element
+                  (id))))))
+        (local_property_assignment
+          (normal_prop_assign
+            (id)
+            (replicate
+              (number)
+              (concatenate
+                (instance_ref
+                  (instance_ref_element
+                    (id)))
+                (instance_ref
+                  (instance_ref_element
+                    (id)))))))))))

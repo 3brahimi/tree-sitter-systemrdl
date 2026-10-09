@@ -24,7 +24,7 @@ class TestParse(TestCase):
     def test_parses_register_map_without_errors(self):
         tree = self.parser.parse(SOURCE)
         self.assertFalse(tree.root_node.has_error)
-        self.assertEqual(tree.root_node.type, "source_file")
+        self.assertEqual(tree.root_node.type, "root")
 
     def test_reports_syntax_errors(self):
         tree = self.parser.parse(b"addrmap top { reg { field f; } r }")

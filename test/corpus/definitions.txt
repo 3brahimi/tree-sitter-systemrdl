@@ -1,0 +1,166 @@
+================================================================================
+User-defined property
+================================================================================
+
+property my_p { type = longint unsigned[]; component = reg | field; default = 0; };
+
+--------------------------------------------------------------------------------
+
+(root
+  (udp_def
+    (id)
+    (udp_type
+      (udp_data_type
+        (basic_data_type))
+      (array_type_suffix))
+    (udp_usage
+      (udp_comp_type
+        (component_type
+          (component_type_primary)))
+      (udp_comp_type
+        (component_type
+          (component_type_primary))))
+    (udp_default
+      (number))))
+
+================================================================================
+Enum with property block
+================================================================================
+
+enum mode_e { idle = 0 { desc = "idle"; }; busy; };
+
+--------------------------------------------------------------------------------
+
+(root
+  (enum_def
+    (id)
+    (enum_entry
+      (id)
+      (number)
+      (enum_prop_assign
+        (id)
+        (string_literal)))
+    (enum_entry
+      (id))))
+
+================================================================================
+Abstract struct with base
+================================================================================
+
+abstract struct cfg_s : base_s { boolean en; string names[]; };
+
+--------------------------------------------------------------------------------
+
+(root
+  (struct_def
+    (id)
+    (id)
+    (struct_elem
+      (data_type
+        (basic_data_type))
+      (id))
+    (struct_elem
+      (data_type
+        (basic_data_type))
+      (id)
+      (array_type_suffix))))
+
+================================================================================
+Parameterized definition and instance
+================================================================================
+
+reg r_t #(longint W = 8) { field {} f[W]; };
+addrmap top { r_t #(.W(4)) r0, r1[2] @ 0x10 += 4; };
+
+--------------------------------------------------------------------------------
+
+(root
+  (component_def
+    (component_named_def
+      (component_type
+        (component_type_primary))
+      (id)
+      (param_def
+        (param_def_elem
+          (data_type
+            (basic_data_type))
+          (id)
+          (number)))
+      (component_body
+        (component_def
+          (component_anon_def
+            (component_type
+              (component_type_primary))
+            (component_body))
+          (component_insts
+            (component_inst
+              (id)
+              (array_suffix
+                (instance_ref
+                  (instance_ref_element
+                    (id))))))))))
+  (component_def
+    (component_named_def
+      (component_type
+        (component_type_primary))
+      (id)
+      (component_body
+        (explicit_component_inst
+          (id)
+          (component_insts
+            (param_inst
+              (param_assignment
+                (id)
+                (number)))
+            (component_inst
+              (id))
+            (component_inst
+              (id)
+              (array_suffix
+                (number))
+              (inst_addr_fixed
+                (number))
+              (inst_addr_stride
+                (number)))))))))
+
+================================================================================
+Property assignments
+================================================================================
+
+addrmap top { default sw = rw; posedge intr; encode = mode_e; r0.f->reset = 1; r0->hw; };
+
+--------------------------------------------------------------------------------
+
+(root
+  (component_def
+    (component_named_def
+      (component_type
+        (component_type_primary))
+      (id)
+      (component_body
+        (local_property_assignment
+          (normal_prop_assign
+            (prop_keyword)
+            (accesstype_literal)))
+        (local_property_assignment
+          (prop_mod_assign
+            (prop_mod)
+            (id)))
+        (local_property_assignment
+          (encode_prop_assign
+            (id)))
+        (dynamic_property_assignment
+          (instance_ref
+            (instance_ref_element
+              (id))
+            (instance_ref_element
+              (id)))
+          (normal_prop_assign
+            (id)
+            (number)))
+        (dynamic_property_assignment
+          (instance_ref
+            (instance_ref_element
+              (id)))
+          (normal_prop_assign
+            (prop_keyword)))))))

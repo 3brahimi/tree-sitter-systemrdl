@@ -1,0 +1,84 @@
+================================================================================
+Constraint comparison splits at the rightmost comparison
+================================================================================
+
+constraint c { a < b && c < d; x < y && z; };
+
+--------------------------------------------------------------------------------
+
+(root
+  (constraint_def
+    (constraint_named_def
+      (id)
+      (constraint_body
+        (constr_relational
+          (binary_expr
+            (binary_expr
+              (instance_ref
+                (instance_ref_element
+                  (id)))
+              (instance_ref
+                (instance_ref_element
+                  (id))))
+            (instance_ref
+              (instance_ref_element
+                (id))))
+          (instance_ref
+            (instance_ref_element
+              (id))))
+        (constr_relational
+          (instance_ref
+            (instance_ref_element
+              (id)))
+          (binary_expr
+            (instance_ref
+              (instance_ref_element
+                (id)))
+            (instance_ref
+              (instance_ref_element
+                (id)))))))))
+
+================================================================================
+Constraint inside lists and enums
+================================================================================
+
+constraint c { this inside {1, [4:7]}; a.b inside mode_e; width = 4; } c0;
+
+--------------------------------------------------------------------------------
+
+(root
+  (constraint_def
+    (constraint_named_def
+      (id)
+      (constraint_body
+        (constr_inside_values
+          (constr_lhs)
+          (constr_inside_value
+            (number))
+          (constr_inside_value
+            (number)
+            (number)))
+        (constr_inside_enum
+          (constr_lhs
+            (instance_ref
+              (instance_ref_element
+                (id))
+              (instance_ref_element
+                (id))))
+          (id))
+        (constr_prop_assign
+          (id)
+          (number))))
+    (constraint_insts
+      (id))))
+
+================================================================================
+A bare expression is not a constraint
+:error
+================================================================================
+
+constraint c { x + 1; };
+
+--------------------------------------------------------------------------------
+
+

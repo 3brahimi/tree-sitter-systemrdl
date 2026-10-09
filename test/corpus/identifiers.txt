@@ -1,0 +1,51 @@
+================================================================================
+Escaped identifiers may spell keywords
+================================================================================
+
+reg r_t { field { sw = rw; } \rw[1]; };
+
+--------------------------------------------------------------------------------
+
+(root
+  (component_def
+    (component_named_def
+      (component_type
+        (component_type_primary))
+      (id)
+      (component_body
+        (component_def
+          (component_anon_def
+            (component_type
+              (component_type_primary))
+            (component_body
+              (local_property_assignment
+                (normal_prop_assign
+                  (prop_keyword)
+                  (accesstype_literal)))))
+          (component_insts
+            (component_inst
+              (id)
+              (array_suffix
+                (number)))))))))
+
+================================================================================
+Keywords are reserved as identifiers
+:error
+================================================================================
+
+reg r_t { field {} rw; };
+
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Annex D reserved words are not identifiers
+:error
+================================================================================
+
+reg r_t { field {} int; };
+
+--------------------------------------------------------------------------------
+
+

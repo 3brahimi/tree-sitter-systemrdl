@@ -16,14 +16,22 @@ license.text = "MIT"
 name = "tree-sitter-systemrdl"
 readme = "README.md"
 requires-python = ">=3.10"
-version = "0.9.0"
+version = "0.10.0"
 
 [project.urls]
 Homepage = "https://github.com/3brahimi/tree-sitter-systemrdl"
 
 [project.optional-dependencies]
 core = [ "tree-sitter>=0.25" ]
-test = [ "pytest", "tree-sitter>=0.25" ]
+test = [
+  "pytest",
+  "tree-sitter>=0.25",
+  # systemrdl-compiler runtime, for the conformance tests
+  "antlr4-python3-runtime>=4.11,<4.14",
+  "colorama",
+  "markdown",
+  "typing_extensions",
+]
 
 [tool.cibuildwheel]
 build = "cp310-*"

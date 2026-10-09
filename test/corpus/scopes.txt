@@ -47,105 +47,100 @@ addrmap scope_test {
 
 ----
 
-(source_file
-  (description
-    (enum_def (id) (enum_body (enum_entry (id)) (enum_entry (id)))))
-  (description
-    (component_def
-      (component_named_def
-        (component_type (component_primary_type))
-        (id)
-        (component_body
-          (component_body_elem
-            (component_def
-              (component_anon_def
-                (component_type (component_primary_type))
-                (component_body
-                  (component_body_elem (enum_def (id) (enum_body (enum_entry (id)) (enum_entry (id)))))
-                  (component_body_elem (property_assignment (explicit_or_default_prop_assignment (explicit_prop_assignment (explicit_encode_assignment (id))))))
-                )
-              )
-              (component_insts (component_inst (id)))
-            )
-          )
-          (component_body_elem
-            (component_def
-              (component_named_def
-                (component_type (component_primary_type))
+(root
+  (enum_def
+    (id)
+    (enum_entry
+      (id))
+    (enum_entry
+      (id)))
+  (component_def
+    (component_named_def
+      (component_type
+        (component_type_primary))
+      (id)
+      (component_body
+        (component_def
+          (component_anon_def
+            (component_type
+              (component_type_primary))
+            (component_body
+              (enum_def
                 (id)
-                (component_body
-                  (component_body_elem
-                    (property_assignment
-                      (explicit_or_default_prop_assignment (explicit_prop_assignment (explicit_encode_assignment (id))))
-                    )
-                  )
-                )
-              )
-            )
-          )
-          (component_body_elem (explicit_component_inst (id) (component_insts (component_inst (id)))))
-        )
-      )
-    )
-  )
-  (description
-    (component_def
-      (component_named_def
-        (component_type (component_primary_type))
-        (id)
-        (component_body
-          (component_body_elem
-            (explicit_component_inst (id) (component_insts (component_inst (id))))
-          )
-          (component_body_elem
-            (component_def
-              (component_named_def
-                (component_type (component_primary_type))
+                (enum_entry
+                  (id))
+                (enum_entry
+                  (id)))
+              (local_property_assignment
+                (encode_prop_assign
+                  (id)))))
+          (component_insts
+            (component_inst
+              (id))))
+        (component_def
+          (component_named_def
+            (component_type
+              (component_type_primary))
+            (id)
+            (component_body
+              (local_property_assignment
+                (encode_prop_assign
+                  (id))))))
+        (explicit_component_inst
+          (id)
+          (component_insts
+            (component_inst
+              (id)))))))
+  (component_def
+    (component_named_def
+      (component_type
+        (component_type_primary))
+      (id)
+      (component_body
+        (explicit_component_inst
+          (id)
+          (component_insts
+            (component_inst
+              (id))))
+        (component_def
+          (component_named_def
+            (component_type
+              (component_type_primary))
+            (id)
+            (component_body
+              (component_def
+                (component_anon_def
+                  (component_type
+                    (component_type_primary))
+                  (component_body
+                    (enum_def
+                      (id)
+                      (enum_entry
+                        (id))
+                      (enum_entry
+                        (id)))
+                    (local_property_assignment
+                      (encode_prop_assign
+                        (id)))))
+                (component_insts
+                  (component_inst
+                    (id))))
+              (component_def
+                (component_named_def
+                  (component_type
+                    (component_type_primary))
+                  (id)
+                  (component_body
+                    (local_property_assignment
+                      (encode_prop_assign
+                        (id))))))
+              (explicit_component_inst
                 (id)
-                (component_body
-                  (component_body_elem
-                    (component_def
-                      (component_anon_def
-                        (component_type (component_primary_type))
-                        (component_body
-                          (component_body_elem
-                            (enum_def (id) (enum_body (enum_entry (id)) (enum_entry (id))))
-                          )
-                          (component_body_elem
-                            (property_assignment
-                              (explicit_or_default_prop_assignment
-                                (explicit_prop_assignment (explicit_encode_assignment (id)))
-                              )
-                            )
-                          )
-                        )
-                      )
-                      (component_insts (component_inst (id)))
-                    )
-                  )
-                  (component_body_elem
-                    (component_def
-                      (component_named_def
-                        (component_type (component_primary_type))
-                        (id)
-                        (component_body
-                          (component_body_elem
-                            (property_assignment
-                              (explicit_or_default_prop_assignment (explicit_prop_assignment (explicit_encode_assignment (id))))
-                            )
-                          )
-                        )
-                      )
-                    )
-                  )
-                  (component_body_elem (explicit_component_inst (id) (component_insts (component_inst (id)))))
-                )
-              )
-            )
-          )
-          (component_body_elem (explicit_component_inst (id) (component_insts (component_inst (id)))))
-        )
-      )
-    )
-  )
-)
+                (component_insts
+                  (component_inst
+                    (id)))))))
+        (explicit_component_inst
+          (id)
+          (component_insts
+            (component_inst
+              (id))))))))

@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  TREE_SITTER_VERSION: v0.27.1
+
+jobs:
+  test:
+    name: Test (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            cli: tree-sitter-linux-x64
+          - os: macos-latest
+            cli: tree-sitter-macos-arm64
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Install the tree-sitter CLI
+        run: |
+          curl -fsSL "https://github.com/tree-sitter/tree-sitter/releases/download/${TREE_SITTER_VERSION}/${{ matrix.cli }}.gz" \
+            | gunzip > "$RUNNER_TEMP/tree-sitter"
+          chmod +x "$RUNNER_TEMP/tree-sitter"
+          echo "$RUNNER_TEMP" >> "$GITHUB_PATH"
+
+      # The CLI evaluates grammar.js with its built-in QuickJS engine, so the
+      # parser is generated without Node.js. A stale src/ fails the build.
+      - name: Generate the parser and check src/ is up to date
+        run: |
+          tree-sitter generate --js-runtime native
+          git diff --exit-code -- src/
+
+      - name: Run the corpus tests
+        run: tree-sitter test
+
+      - uses: astral-sh/setup-uv@v6
+
+      - name: Install the Python package
+        run: |
+          uv venv --python 3.12
+          uv pip install '.[test]'
+
+      - name: Run the Python tests, including ANTLR conformance
+        env:
+          REQUIRE_CONFORMANCE: "1"
+        run: .venv/bin/python -m pytest bindings/python/tests

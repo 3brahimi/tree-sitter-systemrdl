@@ -10,22 +10,6 @@
     "fields": {}
   },
   {
-    "type": "array",
-    "named": true,
-    "fields": {
-      "size": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "constant_expression",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
     "type": "array_literal",
     "named": true,
     "fields": {},
@@ -34,14 +18,189 @@
       "required": false,
       "types": [
         {
-          "type": "constant_expression",
+          "type": "accesstype_literal",
+          "named": true
+        },
+        {
+          "type": "addressingtype_literal",
+          "named": true
+        },
+        {
+          "type": "array_literal",
+          "named": true
+        },
+        {
+          "type": "binary_expr",
+          "named": true
+        },
+        {
+          "type": "boolean_literal",
+          "named": true
+        },
+        {
+          "type": "cast_type",
+          "named": true
+        },
+        {
+          "type": "cast_width",
+          "named": true
+        },
+        {
+          "type": "concatenate",
+          "named": true
+        },
+        {
+          "type": "enum_literal",
+          "named": true
+        },
+        {
+          "type": "instance_ref",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "onreadtype_literal",
+          "named": true
+        },
+        {
+          "type": "onwritetype_literal",
+          "named": true
+        },
+        {
+          "type": "paren_expr",
+          "named": true
+        },
+        {
+          "type": "precedencetype_literal",
+          "named": true
+        },
+        {
+          "type": "prop_ref",
+          "named": true
+        },
+        {
+          "type": "replicate",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "ternary_expr",
+          "named": true
+        },
+        {
+          "type": "unary_expr",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "array_type",
+    "type": "array_suffix",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "accesstype_literal",
+          "named": true
+        },
+        {
+          "type": "addressingtype_literal",
+          "named": true
+        },
+        {
+          "type": "array_literal",
+          "named": true
+        },
+        {
+          "type": "binary_expr",
+          "named": true
+        },
+        {
+          "type": "boolean_literal",
+          "named": true
+        },
+        {
+          "type": "cast_type",
+          "named": true
+        },
+        {
+          "type": "cast_width",
+          "named": true
+        },
+        {
+          "type": "concatenate",
+          "named": true
+        },
+        {
+          "type": "enum_literal",
+          "named": true
+        },
+        {
+          "type": "instance_ref",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "onreadtype_literal",
+          "named": true
+        },
+        {
+          "type": "onwritetype_literal",
+          "named": true
+        },
+        {
+          "type": "paren_expr",
+          "named": true
+        },
+        {
+          "type": "precedencetype_literal",
+          "named": true
+        },
+        {
+          "type": "prop_ref",
+          "named": true
+        },
+        {
+          "type": "replicate",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "ternary_expr",
+          "named": true
+        },
+        {
+          "type": "unary_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "array_type_suffix",
     "named": true,
     "fields": {}
   },
@@ -50,28 +209,291 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": false,
       "types": [
         {
           "type": "id",
-          "named": true
-        },
-        {
-          "type": "signing",
-          "named": true
-        },
-        {
-          "type": "simple_type",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "binary_operator",
+    "type": "binary_expr",
     "named": true,
-    "fields": {}
+    "fields": {
+      "left": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "accesstype_literal",
+            "named": true
+          },
+          {
+            "type": "addressingtype_literal",
+            "named": true
+          },
+          {
+            "type": "array_literal",
+            "named": true
+          },
+          {
+            "type": "binary_expr",
+            "named": true
+          },
+          {
+            "type": "boolean_literal",
+            "named": true
+          },
+          {
+            "type": "cast_type",
+            "named": true
+          },
+          {
+            "type": "cast_width",
+            "named": true
+          },
+          {
+            "type": "concatenate",
+            "named": true
+          },
+          {
+            "type": "enum_literal",
+            "named": true
+          },
+          {
+            "type": "instance_ref",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "onreadtype_literal",
+            "named": true
+          },
+          {
+            "type": "onwritetype_literal",
+            "named": true
+          },
+          {
+            "type": "paren_expr",
+            "named": true
+          },
+          {
+            "type": "precedencetype_literal",
+            "named": true
+          },
+          {
+            "type": "prop_ref",
+            "named": true
+          },
+          {
+            "type": "replicate",
+            "named": true
+          },
+          {
+            "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "struct_literal",
+            "named": true
+          },
+          {
+            "type": "ternary_expr",
+            "named": true
+          },
+          {
+            "type": "unary_expr",
+            "named": true
+          }
+        ]
+      },
+      "operator": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "!=",
+            "named": false
+          },
+          {
+            "type": "%",
+            "named": false
+          },
+          {
+            "type": "&",
+            "named": false
+          },
+          {
+            "type": "&&",
+            "named": false
+          },
+          {
+            "type": "*",
+            "named": false
+          },
+          {
+            "type": "**",
+            "named": false
+          },
+          {
+            "type": "+",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          },
+          {
+            "type": "/",
+            "named": false
+          },
+          {
+            "type": "<",
+            "named": false
+          },
+          {
+            "type": "<<",
+            "named": false
+          },
+          {
+            "type": "<=",
+            "named": false
+          },
+          {
+            "type": "==",
+            "named": false
+          },
+          {
+            "type": ">",
+            "named": false
+          },
+          {
+            "type": ">=",
+            "named": false
+          },
+          {
+            "type": ">>",
+            "named": false
+          },
+          {
+            "type": "^",
+            "named": false
+          },
+          {
+            "type": "^~",
+            "named": false
+          },
+          {
+            "type": "|",
+            "named": false
+          },
+          {
+            "type": "||",
+            "named": false
+          },
+          {
+            "type": "~^",
+            "named": false
+          }
+        ]
+      },
+      "right": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "accesstype_literal",
+            "named": true
+          },
+          {
+            "type": "addressingtype_literal",
+            "named": true
+          },
+          {
+            "type": "array_literal",
+            "named": true
+          },
+          {
+            "type": "binary_expr",
+            "named": true
+          },
+          {
+            "type": "boolean_literal",
+            "named": true
+          },
+          {
+            "type": "cast_type",
+            "named": true
+          },
+          {
+            "type": "cast_width",
+            "named": true
+          },
+          {
+            "type": "concatenate",
+            "named": true
+          },
+          {
+            "type": "enum_literal",
+            "named": true
+          },
+          {
+            "type": "instance_ref",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "onreadtype_literal",
+            "named": true
+          },
+          {
+            "type": "onwritetype_literal",
+            "named": true
+          },
+          {
+            "type": "paren_expr",
+            "named": true
+          },
+          {
+            "type": "precedencetype_literal",
+            "named": true
+          },
+          {
+            "type": "prop_ref",
+            "named": true
+          },
+          {
+            "type": "replicate",
+            "named": true
+          },
+          {
+            "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "struct_literal",
+            "named": true
+          },
+          {
+            "type": "ternary_expr",
+            "named": true
+          },
+          {
+            "type": "unary_expr",
+            "named": true
+          }
+        ]
+      }
+    }
   },
   {
     "type": "boolean_literal",
@@ -79,19 +501,256 @@
     "fields": {}
   },
   {
-    "type": "casting_type",
+    "type": "cast_type",
     "named": true,
-    "fields": {},
+    "fields": {
+      "type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "bit",
+            "named": false
+          },
+          {
+            "type": "boolean",
+            "named": false
+          },
+          {
+            "type": "longint",
+            "named": false
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": false,
-      "required": false,
+      "required": true,
       "types": [
         {
-          "type": "constant_primary",
+          "type": "accesstype_literal",
           "named": true
         },
         {
-          "type": "simple_type",
+          "type": "addressingtype_literal",
+          "named": true
+        },
+        {
+          "type": "array_literal",
+          "named": true
+        },
+        {
+          "type": "binary_expr",
+          "named": true
+        },
+        {
+          "type": "boolean_literal",
+          "named": true
+        },
+        {
+          "type": "cast_type",
+          "named": true
+        },
+        {
+          "type": "cast_width",
+          "named": true
+        },
+        {
+          "type": "concatenate",
+          "named": true
+        },
+        {
+          "type": "enum_literal",
+          "named": true
+        },
+        {
+          "type": "instance_ref",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "onreadtype_literal",
+          "named": true
+        },
+        {
+          "type": "onwritetype_literal",
+          "named": true
+        },
+        {
+          "type": "paren_expr",
+          "named": true
+        },
+        {
+          "type": "precedencetype_literal",
+          "named": true
+        },
+        {
+          "type": "prop_ref",
+          "named": true
+        },
+        {
+          "type": "replicate",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "ternary_expr",
+          "named": true
+        },
+        {
+          "type": "unary_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "cast_width",
+    "named": true,
+    "fields": {
+      "width": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "accesstype_literal",
+            "named": true
+          },
+          {
+            "type": "addressingtype_literal",
+            "named": true
+          },
+          {
+            "type": "boolean_literal",
+            "named": true
+          },
+          {
+            "type": "enum_literal",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "onreadtype_literal",
+            "named": true
+          },
+          {
+            "type": "onwritetype_literal",
+            "named": true
+          },
+          {
+            "type": "paren_expr",
+            "named": true
+          },
+          {
+            "type": "precedencetype_literal",
+            "named": true
+          },
+          {
+            "type": "string_literal",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "accesstype_literal",
+          "named": true
+        },
+        {
+          "type": "addressingtype_literal",
+          "named": true
+        },
+        {
+          "type": "array_literal",
+          "named": true
+        },
+        {
+          "type": "binary_expr",
+          "named": true
+        },
+        {
+          "type": "boolean_literal",
+          "named": true
+        },
+        {
+          "type": "cast_type",
+          "named": true
+        },
+        {
+          "type": "cast_width",
+          "named": true
+        },
+        {
+          "type": "concatenate",
+          "named": true
+        },
+        {
+          "type": "enum_literal",
+          "named": true
+        },
+        {
+          "type": "instance_ref",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "onreadtype_literal",
+          "named": true
+        },
+        {
+          "type": "onwritetype_literal",
+          "named": true
+        },
+        {
+          "type": "paren_expr",
+          "named": true
+        },
+        {
+          "type": "precedencetype_literal",
+          "named": true
+        },
+        {
+          "type": "prop_ref",
+          "named": true
+        },
+        {
+          "type": "replicate",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "ternary_expr",
+          "named": true
+        },
+        {
+          "type": "unary_expr",
           "named": true
         }
       ]
@@ -100,27 +759,20 @@
   {
     "type": "component_anon_def",
     "named": true,
-    "fields": {
-      "body": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "component_body",
-            "named": true
-          }
-        ]
-      },
-      "type": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "component_type",
-            "named": true
-          }
-        ]
-      }
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "component_body",
+          "named": true
+        },
+        {
+          "type": "component_type",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -132,26 +784,15 @@
       "required": false,
       "types": [
         {
-          "type": "component_body_elem",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "component_body_elem",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
           "type": "component_def",
           "named": true
         },
         {
           "type": "constraint_def",
+          "named": true
+        },
+        {
+          "type": "dynamic_property_assignment",
           "named": true
         },
         {
@@ -163,7 +804,7 @@
           "named": true
         },
         {
-          "type": "property_assignment",
+          "type": "local_property_assignment",
           "named": true
         },
         {
@@ -204,57 +845,7 @@
     "type": "component_inst",
     "named": true,
     "fields": {
-      "a0": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "constant_expression",
-            "named": true
-          }
-        ]
-      },
-      "a1": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "constant_expression",
-            "named": true
-          }
-        ]
-      },
-      "a2": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "constant_expression",
-            "named": true
-          }
-        ]
-      },
-      "a3": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "constant_expression",
-            "named": true
-          }
-        ]
-      },
-      "aor": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "component_inst_array_or_range",
-            "named": true
-          }
-        ]
-      },
-      "id": {
+      "name": {
         "multiple": false,
         "required": true,
         "types": [
@@ -264,6 +855,36 @@
           }
         ]
       }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "array_suffix",
+          "named": true
+        },
+        {
+          "type": "field_inst_reset",
+          "named": true
+        },
+        {
+          "type": "inst_addr_align",
+          "named": true
+        },
+        {
+          "type": "inst_addr_fixed",
+          "named": true
+        },
+        {
+          "type": "inst_addr_stride",
+          "named": true
+        },
+        {
+          "type": "range_suffix",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -276,25 +897,6 @@
       "types": [
         {
           "type": "id",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "component_inst_array_or_range",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "array",
-          "named": true
-        },
-        {
-          "type": "range",
           "named": true
         }
       ]
@@ -328,17 +930,7 @@
     "type": "component_named_def",
     "named": true,
     "fields": {
-      "body": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "component_body",
-            "named": true
-          }
-        ]
-      },
-      "id": {
+      "name": {
         "multiple": false,
         "required": true,
         "types": [
@@ -347,33 +939,26 @@
             "named": true
           }
         ]
-      },
-      "param": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "param_def",
-            "named": true
-          }
-        ]
-      },
-      "type": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "component_type",
-            "named": true
-          }
-        ]
       }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "component_body",
+          "named": true
+        },
+        {
+          "type": "component_type",
+          "named": true
+        },
+        {
+          "type": "param_def",
+          "named": true
+        }
+      ]
     }
-  },
-  {
-    "type": "component_primary_type",
-    "named": true,
-    "fields": {}
   },
   {
     "type": "component_type",
@@ -384,14 +969,19 @@
       "required": false,
       "types": [
         {
-          "type": "component_primary_type",
+          "type": "component_type_primary",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "constant_cast",
+    "type": "component_type_primary",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "concatenate",
     "named": true,
     "fields": {},
     "children": {
@@ -399,18 +989,120 @@
       "required": true,
       "types": [
         {
-          "type": "casting_type",
+          "type": "accesstype_literal",
           "named": true
         },
         {
-          "type": "constant_expression",
+          "type": "addressingtype_literal",
+          "named": true
+        },
+        {
+          "type": "array_literal",
+          "named": true
+        },
+        {
+          "type": "binary_expr",
+          "named": true
+        },
+        {
+          "type": "boolean_literal",
+          "named": true
+        },
+        {
+          "type": "cast_type",
+          "named": true
+        },
+        {
+          "type": "cast_width",
+          "named": true
+        },
+        {
+          "type": "concatenate",
+          "named": true
+        },
+        {
+          "type": "enum_literal",
+          "named": true
+        },
+        {
+          "type": "instance_ref",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "onreadtype_literal",
+          "named": true
+        },
+        {
+          "type": "onwritetype_literal",
+          "named": true
+        },
+        {
+          "type": "paren_expr",
+          "named": true
+        },
+        {
+          "type": "precedencetype_literal",
+          "named": true
+        },
+        {
+          "type": "prop_ref",
+          "named": true
+        },
+        {
+          "type": "replicate",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "ternary_expr",
+          "named": true
+        },
+        {
+          "type": "unary_expr",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "constant_concatenation",
+    "type": "constr_inside_enum",
+    "named": true,
+    "fields": {
+      "enum": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "id",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "constr_lhs",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "constr_inside_value",
     "named": true,
     "fields": {},
     "children": {
@@ -418,14 +1110,94 @@
       "required": true,
       "types": [
         {
-          "type": "constant_expression",
+          "type": "accesstype_literal",
+          "named": true
+        },
+        {
+          "type": "addressingtype_literal",
+          "named": true
+        },
+        {
+          "type": "array_literal",
+          "named": true
+        },
+        {
+          "type": "binary_expr",
+          "named": true
+        },
+        {
+          "type": "boolean_literal",
+          "named": true
+        },
+        {
+          "type": "cast_type",
+          "named": true
+        },
+        {
+          "type": "cast_width",
+          "named": true
+        },
+        {
+          "type": "concatenate",
+          "named": true
+        },
+        {
+          "type": "enum_literal",
+          "named": true
+        },
+        {
+          "type": "instance_ref",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "onreadtype_literal",
+          "named": true
+        },
+        {
+          "type": "onwritetype_literal",
+          "named": true
+        },
+        {
+          "type": "paren_expr",
+          "named": true
+        },
+        {
+          "type": "precedencetype_literal",
+          "named": true
+        },
+        {
+          "type": "prop_ref",
+          "named": true
+        },
+        {
+          "type": "replicate",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "ternary_expr",
+          "named": true
+        },
+        {
+          "type": "unary_expr",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "constant_expression",
+    "type": "constr_inside_values",
     "named": true,
     "fields": {},
     "children": {
@@ -433,45 +1205,355 @@
       "required": true,
       "types": [
         {
-          "type": "binary_operator",
+          "type": "constr_inside_value",
           "named": true
         },
         {
-          "type": "constant_expression",
-          "named": true
-        },
-        {
-          "type": "constant_primary",
-          "named": true
-        },
-        {
-          "type": "unary_operator",
+          "type": "constr_lhs",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "constant_multiple_concatenation",
+    "type": "constr_lhs",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
-      "required": true,
+      "multiple": false,
+      "required": false,
       "types": [
         {
-          "type": "constant_concatenation",
-          "named": true
-        },
-        {
-          "type": "constant_expression",
+          "type": "instance_ref",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "constant_primary",
+    "type": "constr_prop_assign",
+    "named": true,
+    "fields": {
+      "property": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "id",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "accesstype_literal",
+          "named": true
+        },
+        {
+          "type": "addressingtype_literal",
+          "named": true
+        },
+        {
+          "type": "array_literal",
+          "named": true
+        },
+        {
+          "type": "binary_expr",
+          "named": true
+        },
+        {
+          "type": "boolean_literal",
+          "named": true
+        },
+        {
+          "type": "cast_type",
+          "named": true
+        },
+        {
+          "type": "cast_width",
+          "named": true
+        },
+        {
+          "type": "concatenate",
+          "named": true
+        },
+        {
+          "type": "enum_literal",
+          "named": true
+        },
+        {
+          "type": "instance_ref",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "onreadtype_literal",
+          "named": true
+        },
+        {
+          "type": "onwritetype_literal",
+          "named": true
+        },
+        {
+          "type": "paren_expr",
+          "named": true
+        },
+        {
+          "type": "precedencetype_literal",
+          "named": true
+        },
+        {
+          "type": "prop_ref",
+          "named": true
+        },
+        {
+          "type": "replicate",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "ternary_expr",
+          "named": true
+        },
+        {
+          "type": "unary_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "constr_relational",
+    "named": true,
+    "fields": {
+      "left": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "accesstype_literal",
+            "named": true
+          },
+          {
+            "type": "addressingtype_literal",
+            "named": true
+          },
+          {
+            "type": "array_literal",
+            "named": true
+          },
+          {
+            "type": "binary_expr",
+            "named": true
+          },
+          {
+            "type": "boolean_literal",
+            "named": true
+          },
+          {
+            "type": "cast_type",
+            "named": true
+          },
+          {
+            "type": "cast_width",
+            "named": true
+          },
+          {
+            "type": "concatenate",
+            "named": true
+          },
+          {
+            "type": "enum_literal",
+            "named": true
+          },
+          {
+            "type": "instance_ref",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "onreadtype_literal",
+            "named": true
+          },
+          {
+            "type": "onwritetype_literal",
+            "named": true
+          },
+          {
+            "type": "paren_expr",
+            "named": true
+          },
+          {
+            "type": "precedencetype_literal",
+            "named": true
+          },
+          {
+            "type": "prop_ref",
+            "named": true
+          },
+          {
+            "type": "replicate",
+            "named": true
+          },
+          {
+            "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "struct_literal",
+            "named": true
+          },
+          {
+            "type": "ternary_expr",
+            "named": true
+          },
+          {
+            "type": "unary_expr",
+            "named": true
+          }
+        ]
+      },
+      "operator": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "!=",
+            "named": false
+          },
+          {
+            "type": "<",
+            "named": false
+          },
+          {
+            "type": "<=",
+            "named": false
+          },
+          {
+            "type": "==",
+            "named": false
+          },
+          {
+            "type": ">",
+            "named": false
+          },
+          {
+            "type": ">=",
+            "named": false
+          }
+        ]
+      },
+      "right": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "accesstype_literal",
+            "named": true
+          },
+          {
+            "type": "addressingtype_literal",
+            "named": true
+          },
+          {
+            "type": "array_literal",
+            "named": true
+          },
+          {
+            "type": "binary_expr",
+            "named": true
+          },
+          {
+            "type": "boolean_literal",
+            "named": true
+          },
+          {
+            "type": "cast_type",
+            "named": true
+          },
+          {
+            "type": "cast_width",
+            "named": true
+          },
+          {
+            "type": "concatenate",
+            "named": true
+          },
+          {
+            "type": "enum_literal",
+            "named": true
+          },
+          {
+            "type": "instance_ref",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "onreadtype_literal",
+            "named": true
+          },
+          {
+            "type": "onwritetype_literal",
+            "named": true
+          },
+          {
+            "type": "paren_expr",
+            "named": true
+          },
+          {
+            "type": "precedencetype_literal",
+            "named": true
+          },
+          {
+            "type": "prop_ref",
+            "named": true
+          },
+          {
+            "type": "replicate",
+            "named": true
+          },
+          {
+            "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "struct_literal",
+            "named": true
+          },
+          {
+            "type": "ternary_expr",
+            "named": true
+          },
+          {
+            "type": "unary_expr",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "constraint_anon_def",
     "named": true,
     "fields": {},
     "children": {
@@ -479,35 +1561,7 @@
       "required": true,
       "types": [
         {
-          "type": "array_literal",
-          "named": true
-        },
-        {
-          "type": "constant_cast",
-          "named": true
-        },
-        {
-          "type": "constant_concatenation",
-          "named": true
-        },
-        {
-          "type": "constant_expression",
-          "named": true
-        },
-        {
-          "type": "constant_multiple_concatenation",
-          "named": true
-        },
-        {
-          "type": "instance_or_prop_ref",
-          "named": true
-        },
-        {
-          "type": "primary_literal",
-          "named": true
-        },
-        {
-          "type": "struct_literal",
+          "type": "constraint_body",
           "named": true
         }
       ]
@@ -522,7 +1576,19 @@
       "required": false,
       "types": [
         {
-          "type": "constraint_elem",
+          "type": "constr_inside_enum",
+          "named": true
+        },
+        {
+          "type": "constr_inside_values",
+          "named": true
+        },
+        {
+          "type": "constr_prop_assign",
+          "named": true
+        },
+        {
+          "type": "constr_relational",
           "named": true
         }
       ]
@@ -533,49 +1599,11 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "constraint_def_anon",
-          "named": true
-        },
-        {
-          "type": "constraint_def_exp",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "constraint_def_anon",
-    "named": true,
-    "fields": {},
-    "children": {
       "multiple": true,
       "required": true,
       "types": [
         {
-          "type": "constraint_body",
-          "named": true
-        },
-        {
-          "type": "constraint_insts",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "constraint_def_exp",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "constraint_body",
+          "type": "constraint_anon_def",
           "named": true
         },
         {
@@ -583,38 +1611,7 @@
           "named": true
         },
         {
-          "type": "id",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "constraint_elem",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "constant_expression",
-          "named": true
-        },
-        {
-          "type": "constraint_lhs",
-          "named": true
-        },
-        {
-          "type": "constraint_prop_assignment",
-          "named": true
-        },
-        {
-          "type": "constraint_values",
-          "named": true
-        },
-        {
-          "type": "id",
+          "type": "constraint_named_def",
           "named": true
         }
       ]
@@ -636,64 +1633,26 @@
     }
   },
   {
-    "type": "constraint_lhs",
+    "type": "constraint_named_def",
     "named": true,
-    "fields": {},
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "id",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "instance_ref",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "constraint_prop_assignment",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
       "required": true,
       "types": [
         {
-          "type": "constant_expression",
-          "named": true
-        },
-        {
-          "type": "id",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "constraint_value",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "constant_expression",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "constraint_values",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "constraint_value",
+          "type": "constraint_body",
           "named": true
         }
       ]
@@ -715,51 +1674,62 @@
     }
   },
   {
-    "type": "description",
+    "type": "dynamic_property_assignment",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
-          "type": "component_def",
+          "type": "encode_prop_assign",
           "named": true
         },
         {
-          "type": "constraint_def",
+          "type": "instance_ref",
           "named": true
         },
         {
-          "type": "enum_def",
-          "named": true
-        },
-        {
-          "type": "explicit_component_inst",
-          "named": true
-        },
-        {
-          "type": "property_assignment",
-          "named": true
-        },
-        {
-          "type": "property_definition",
-          "named": true
-        },
-        {
-          "type": "struct_def",
+          "type": "normal_prop_assign",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "enum_body",
+    "type": "encode_prop_assign",
     "named": true,
-    "fields": {},
+    "fields": {
+      "enum": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "id",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "enum_def",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "id",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "enum_entry",
@@ -769,72 +1739,242 @@
     }
   },
   {
-    "type": "enum_def",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "enum_body",
-          "named": true
-        },
-        {
-          "type": "id",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "enum_entry",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "constant_expression",
-          "named": true
-        },
-        {
-          "type": "enum_property_assignment",
-          "named": true
-        },
-        {
-          "type": "id",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "enum_property_assignment",
-    "named": true,
-    "fields": {},
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "id",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
       "required": false,
       "types": [
         {
-          "type": "explicit_prop_assignment",
+          "type": "accesstype_literal",
+          "named": true
+        },
+        {
+          "type": "addressingtype_literal",
+          "named": true
+        },
+        {
+          "type": "array_literal",
+          "named": true
+        },
+        {
+          "type": "binary_expr",
+          "named": true
+        },
+        {
+          "type": "boolean_literal",
+          "named": true
+        },
+        {
+          "type": "cast_type",
+          "named": true
+        },
+        {
+          "type": "cast_width",
+          "named": true
+        },
+        {
+          "type": "concatenate",
+          "named": true
+        },
+        {
+          "type": "enum_literal",
+          "named": true
+        },
+        {
+          "type": "enum_prop_assign",
+          "named": true
+        },
+        {
+          "type": "instance_ref",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "onreadtype_literal",
+          "named": true
+        },
+        {
+          "type": "onwritetype_literal",
+          "named": true
+        },
+        {
+          "type": "paren_expr",
+          "named": true
+        },
+        {
+          "type": "precedencetype_literal",
+          "named": true
+        },
+        {
+          "type": "prop_ref",
+          "named": true
+        },
+        {
+          "type": "replicate",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "ternary_expr",
+          "named": true
+        },
+        {
+          "type": "unary_expr",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "enumerator_literal",
+    "type": "enum_literal",
     "named": true,
-    "fields": {},
+    "fields": {
+      "enum": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "id",
+            "named": true
+          }
+        ]
+      },
+      "member": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "id",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "enum_prop_assign",
+    "named": true,
+    "fields": {
+      "property": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "id",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "types": [
         {
-          "type": "id",
+          "type": "accesstype_literal",
+          "named": true
+        },
+        {
+          "type": "addressingtype_literal",
+          "named": true
+        },
+        {
+          "type": "array_literal",
+          "named": true
+        },
+        {
+          "type": "binary_expr",
+          "named": true
+        },
+        {
+          "type": "boolean_literal",
+          "named": true
+        },
+        {
+          "type": "cast_type",
+          "named": true
+        },
+        {
+          "type": "cast_width",
+          "named": true
+        },
+        {
+          "type": "concatenate",
+          "named": true
+        },
+        {
+          "type": "enum_literal",
+          "named": true
+        },
+        {
+          "type": "instance_ref",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "onreadtype_literal",
+          "named": true
+        },
+        {
+          "type": "onwritetype_literal",
+          "named": true
+        },
+        {
+          "type": "paren_expr",
+          "named": true
+        },
+        {
+          "type": "precedencetype_literal",
+          "named": true
+        },
+        {
+          "type": "prop_ref",
+          "named": true
+        },
+        {
+          "type": "replicate",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "ternary_expr",
+          "named": true
+        },
+        {
+          "type": "unary_expr",
           "named": true
         }
       ]
@@ -844,7 +1984,7 @@
     "type": "explicit_component_inst",
     "named": true,
     "fields": {
-      "id": {
+      "type": {
         "multiple": false,
         "required": true,
         "types": [
@@ -875,7 +2015,7 @@
     }
   },
   {
-    "type": "explicit_encode_assignment",
+    "type": "field_inst_reset",
     "named": true,
     "fields": {},
     "children": {
@@ -883,96 +2023,39 @@
       "required": true,
       "types": [
         {
-          "type": "id",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "explicit_or_default_prop_assignment",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "explicit_prop_assignment",
+          "type": "accesstype_literal",
           "named": true
         },
         {
-          "type": "explicit_prop_modifier",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "explicit_prop_assignment",
-    "named": true,
-    "fields": {
-      "LHS": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "prop_assignment_lhs",
-            "named": true
-          }
-        ]
-      },
-      "RHS": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "prop_assignment_rhs",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "explicit_encode_assignment",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "explicit_prop_modifier",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "id",
+          "type": "addressingtype_literal",
           "named": true
         },
         {
-          "type": "prop_mod",
+          "type": "array_literal",
           "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "instance_or_prop_ref",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
+        },
         {
-          "type": "id",
+          "type": "binary_expr",
+          "named": true
+        },
+        {
+          "type": "boolean_literal",
+          "named": true
+        },
+        {
+          "type": "cast_type",
+          "named": true
+        },
+        {
+          "type": "cast_width",
+          "named": true
+        },
+        {
+          "type": "concatenate",
+          "named": true
+        },
+        {
+          "type": "enum_literal",
           "named": true
         },
         {
@@ -980,7 +2063,332 @@
           "named": true
         },
         {
-          "type": "prop_keyword",
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "onreadtype_literal",
+          "named": true
+        },
+        {
+          "type": "onwritetype_literal",
+          "named": true
+        },
+        {
+          "type": "paren_expr",
+          "named": true
+        },
+        {
+          "type": "precedencetype_literal",
+          "named": true
+        },
+        {
+          "type": "prop_ref",
+          "named": true
+        },
+        {
+          "type": "replicate",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "ternary_expr",
+          "named": true
+        },
+        {
+          "type": "unary_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "inst_addr_align",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "accesstype_literal",
+          "named": true
+        },
+        {
+          "type": "addressingtype_literal",
+          "named": true
+        },
+        {
+          "type": "array_literal",
+          "named": true
+        },
+        {
+          "type": "binary_expr",
+          "named": true
+        },
+        {
+          "type": "boolean_literal",
+          "named": true
+        },
+        {
+          "type": "cast_type",
+          "named": true
+        },
+        {
+          "type": "cast_width",
+          "named": true
+        },
+        {
+          "type": "concatenate",
+          "named": true
+        },
+        {
+          "type": "enum_literal",
+          "named": true
+        },
+        {
+          "type": "instance_ref",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "onreadtype_literal",
+          "named": true
+        },
+        {
+          "type": "onwritetype_literal",
+          "named": true
+        },
+        {
+          "type": "paren_expr",
+          "named": true
+        },
+        {
+          "type": "precedencetype_literal",
+          "named": true
+        },
+        {
+          "type": "prop_ref",
+          "named": true
+        },
+        {
+          "type": "replicate",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "ternary_expr",
+          "named": true
+        },
+        {
+          "type": "unary_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "inst_addr_fixed",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "accesstype_literal",
+          "named": true
+        },
+        {
+          "type": "addressingtype_literal",
+          "named": true
+        },
+        {
+          "type": "array_literal",
+          "named": true
+        },
+        {
+          "type": "binary_expr",
+          "named": true
+        },
+        {
+          "type": "boolean_literal",
+          "named": true
+        },
+        {
+          "type": "cast_type",
+          "named": true
+        },
+        {
+          "type": "cast_width",
+          "named": true
+        },
+        {
+          "type": "concatenate",
+          "named": true
+        },
+        {
+          "type": "enum_literal",
+          "named": true
+        },
+        {
+          "type": "instance_ref",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "onreadtype_literal",
+          "named": true
+        },
+        {
+          "type": "onwritetype_literal",
+          "named": true
+        },
+        {
+          "type": "paren_expr",
+          "named": true
+        },
+        {
+          "type": "precedencetype_literal",
+          "named": true
+        },
+        {
+          "type": "prop_ref",
+          "named": true
+        },
+        {
+          "type": "replicate",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "ternary_expr",
+          "named": true
+        },
+        {
+          "type": "unary_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "inst_addr_stride",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "accesstype_literal",
+          "named": true
+        },
+        {
+          "type": "addressingtype_literal",
+          "named": true
+        },
+        {
+          "type": "array_literal",
+          "named": true
+        },
+        {
+          "type": "binary_expr",
+          "named": true
+        },
+        {
+          "type": "boolean_literal",
+          "named": true
+        },
+        {
+          "type": "cast_type",
+          "named": true
+        },
+        {
+          "type": "cast_width",
+          "named": true
+        },
+        {
+          "type": "concatenate",
+          "named": true
+        },
+        {
+          "type": "enum_literal",
+          "named": true
+        },
+        {
+          "type": "instance_ref",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "onreadtype_literal",
+          "named": true
+        },
+        {
+          "type": "onwritetype_literal",
+          "named": true
+        },
+        {
+          "type": "paren_expr",
+          "named": true
+        },
+        {
+          "type": "precedencetype_literal",
+          "named": true
+        },
+        {
+          "type": "prop_ref",
+          "named": true
+        },
+        {
+          "type": "replicate",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "ternary_expr",
+          "named": true
+        },
+        {
+          "type": "unary_expr",
           "named": true
         }
       ]
@@ -1004,24 +2412,31 @@
   {
     "type": "instance_ref_element",
     "named": true,
-    "fields": {},
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "id",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
-          "type": "array",
-          "named": true
-        },
-        {
-          "type": "id",
+          "type": "array_suffix",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "integer_type",
+    "type": "local_property_assignment",
     "named": true,
     "fields": {},
     "children": {
@@ -1029,11 +2444,125 @@
       "required": true,
       "types": [
         {
-          "type": "integer_atom_type",
+          "type": "encode_prop_assign",
           "named": true
         },
         {
-          "type": "integer_vector_type",
+          "type": "normal_prop_assign",
+          "named": true
+        },
+        {
+          "type": "prop_mod_assign",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "normal_prop_assign",
+    "named": true,
+    "fields": {
+      "property": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "id",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "accesstype_literal",
+          "named": true
+        },
+        {
+          "type": "addressingtype_literal",
+          "named": true
+        },
+        {
+          "type": "array_literal",
+          "named": true
+        },
+        {
+          "type": "binary_expr",
+          "named": true
+        },
+        {
+          "type": "boolean_literal",
+          "named": true
+        },
+        {
+          "type": "cast_type",
+          "named": true
+        },
+        {
+          "type": "cast_width",
+          "named": true
+        },
+        {
+          "type": "concatenate",
+          "named": true
+        },
+        {
+          "type": "enum_literal",
+          "named": true
+        },
+        {
+          "type": "instance_ref",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "onreadtype_literal",
+          "named": true
+        },
+        {
+          "type": "onwritetype_literal",
+          "named": true
+        },
+        {
+          "type": "paren_expr",
+          "named": true
+        },
+        {
+          "type": "precedencetype_literal",
+          "named": true
+        },
+        {
+          "type": "prop_keyword",
+          "named": true
+        },
+        {
+          "type": "prop_ref",
+          "named": true
+        },
+        {
+          "type": "replicate",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "ternary_expr",
+          "named": true
+        },
+        {
+          "type": "unary_expr",
           "named": true
         }
       ]
@@ -1048,6 +2577,112 @@
     "type": "onwritetype_literal",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": "param_assignment",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "id",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "accesstype_literal",
+          "named": true
+        },
+        {
+          "type": "addressingtype_literal",
+          "named": true
+        },
+        {
+          "type": "array_literal",
+          "named": true
+        },
+        {
+          "type": "binary_expr",
+          "named": true
+        },
+        {
+          "type": "boolean_literal",
+          "named": true
+        },
+        {
+          "type": "cast_type",
+          "named": true
+        },
+        {
+          "type": "cast_width",
+          "named": true
+        },
+        {
+          "type": "concatenate",
+          "named": true
+        },
+        {
+          "type": "enum_literal",
+          "named": true
+        },
+        {
+          "type": "instance_ref",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "onreadtype_literal",
+          "named": true
+        },
+        {
+          "type": "onwritetype_literal",
+          "named": true
+        },
+        {
+          "type": "paren_expr",
+          "named": true
+        },
+        {
+          "type": "precedencetype_literal",
+          "named": true
+        },
+        {
+          "type": "prop_ref",
+          "named": true
+        },
+        {
+          "type": "replicate",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "ternary_expr",
+          "named": true
+        },
+        {
+          "type": "unary_expr",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "param_def",
@@ -1067,133 +2702,21 @@
   {
     "type": "param_def_elem",
     "named": true,
-    "fields": {},
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "id",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
       "required": true,
-      "types": [
-        {
-          "type": "array_type",
-          "named": true
-        },
-        {
-          "type": "constant_expression",
-          "named": true
-        },
-        {
-          "type": "data_type",
-          "named": true
-        },
-        {
-          "type": "id",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "param_elem",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "id",
-          "named": true
-        },
-        {
-          "type": "param_value",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "param_inst",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "param_elem",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "param_value",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "constant_expression",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "post_encode_assignment",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "id",
-          "named": true
-        },
-        {
-          "type": "instance_ref",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "post_prop_assignment",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "post_encode_assignment",
-          "named": true
-        },
-        {
-          "type": "prop_assignment_rhs",
-          "named": true
-        },
-        {
-          "type": "prop_ref",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "precedencetype_literal",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "primary_literal",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
       "types": [
         {
           "type": "accesstype_literal",
@@ -1204,11 +2727,43 @@
           "named": true
         },
         {
+          "type": "array_literal",
+          "named": true
+        },
+        {
+          "type": "array_type_suffix",
+          "named": true
+        },
+        {
+          "type": "binary_expr",
+          "named": true
+        },
+        {
           "type": "boolean_literal",
           "named": true
         },
         {
-          "type": "enumerator_literal",
+          "type": "cast_type",
+          "named": true
+        },
+        {
+          "type": "cast_width",
+          "named": true
+        },
+        {
+          "type": "concatenate",
+          "named": true
+        },
+        {
+          "type": "data_type",
+          "named": true
+        },
+        {
+          "type": "enum_literal",
+          "named": true
+        },
+        {
+          "type": "instance_ref",
           "named": true
         },
         {
@@ -1224,49 +2779,154 @@
           "named": true
         },
         {
-          "type": "string_literal",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "prop_assignment_lhs",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "id",
-          "named": true
-        },
-        {
-          "type": "prop_keyword",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "prop_assignment_rhs",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "constant_expression",
+          "type": "paren_expr",
           "named": true
         },
         {
           "type": "precedencetype_literal",
           "named": true
+        },
+        {
+          "type": "prop_ref",
+          "named": true
+        },
+        {
+          "type": "replicate",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "ternary_expr",
+          "named": true
+        },
+        {
+          "type": "unary_expr",
+          "named": true
         }
       ]
     }
+  },
+  {
+    "type": "param_inst",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "param_assignment",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "paren_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "accesstype_literal",
+          "named": true
+        },
+        {
+          "type": "addressingtype_literal",
+          "named": true
+        },
+        {
+          "type": "array_literal",
+          "named": true
+        },
+        {
+          "type": "binary_expr",
+          "named": true
+        },
+        {
+          "type": "boolean_literal",
+          "named": true
+        },
+        {
+          "type": "cast_type",
+          "named": true
+        },
+        {
+          "type": "cast_width",
+          "named": true
+        },
+        {
+          "type": "concatenate",
+          "named": true
+        },
+        {
+          "type": "enum_literal",
+          "named": true
+        },
+        {
+          "type": "instance_ref",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "onreadtype_literal",
+          "named": true
+        },
+        {
+          "type": "onwritetype_literal",
+          "named": true
+        },
+        {
+          "type": "paren_expr",
+          "named": true
+        },
+        {
+          "type": "precedencetype_literal",
+          "named": true
+        },
+        {
+          "type": "prop_ref",
+          "named": true
+        },
+        {
+          "type": "replicate",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "ternary_expr",
+          "named": true
+        },
+        {
+          "type": "unary_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "precedencetype_literal",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "prop_keyword",
@@ -1279,17 +2939,50 @@
     "fields": {}
   },
   {
+    "type": "prop_mod_assign",
+    "named": true,
+    "fields": {
+      "property": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "id",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "prop_mod",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "prop_ref",
     "named": true,
-    "fields": {},
+    "fields": {
+      "property": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "id",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
       "required": true,
       "types": [
-        {
-          "type": "id",
-          "named": true
-        },
         {
           "type": "instance_ref",
           "named": true
@@ -1302,53 +2995,7 @@
     }
   },
   {
-    "type": "property_assignment",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "explicit_or_default_prop_assignment",
-          "named": true
-        },
-        {
-          "type": "post_prop_assignment",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "property_attribute",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "property_constraint",
-          "named": true
-        },
-        {
-          "type": "property_default",
-          "named": true
-        },
-        {
-          "type": "property_type",
-          "named": true
-        },
-        {
-          "type": "property_usage",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "property_body",
+    "type": "range_suffix",
     "named": true,
     "fields": {},
     "children": {
@@ -1356,29 +3003,94 @@
       "required": true,
       "types": [
         {
-          "type": "property_attribute",
+          "type": "accesstype_literal",
           "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "property_comp_type",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
+        },
         {
-          "type": "component_type",
+          "type": "addressingtype_literal",
+          "named": true
+        },
+        {
+          "type": "array_literal",
+          "named": true
+        },
+        {
+          "type": "binary_expr",
+          "named": true
+        },
+        {
+          "type": "boolean_literal",
+          "named": true
+        },
+        {
+          "type": "cast_type",
+          "named": true
+        },
+        {
+          "type": "cast_width",
+          "named": true
+        },
+        {
+          "type": "concatenate",
+          "named": true
+        },
+        {
+          "type": "enum_literal",
+          "named": true
+        },
+        {
+          "type": "instance_ref",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "onreadtype_literal",
+          "named": true
+        },
+        {
+          "type": "onwritetype_literal",
+          "named": true
+        },
+        {
+          "type": "paren_expr",
+          "named": true
+        },
+        {
+          "type": "precedencetype_literal",
+          "named": true
+        },
+        {
+          "type": "prop_ref",
+          "named": true
+        },
+        {
+          "type": "replicate",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "ternary_expr",
+          "named": true
+        },
+        {
+          "type": "unary_expr",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "property_comp_types",
+    "type": "replicate",
     "named": true,
     "fields": {},
     "children": {
@@ -1386,157 +3098,94 @@
       "required": true,
       "types": [
         {
-          "type": "property_comp_type",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "property_constraint",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "property_constraint_type",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "property_data_type",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "basic_data_type",
+          "type": "accesstype_literal",
           "named": true
         },
         {
-          "type": "component_primary_type",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "property_default",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "constant_expression",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "property_definition",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "id",
+          "type": "addressingtype_literal",
           "named": true
         },
         {
-          "type": "property_body",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "property_type",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "array_type",
+          "type": "array_literal",
           "named": true
         },
         {
-          "type": "property_data_type",
+          "type": "binary_expr",
           "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "property_usage",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
+        },
         {
-          "type": "property_comp_types",
+          "type": "boolean_literal",
           "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "range",
-    "named": true,
-    "fields": {
-      "lsb": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "constant_expression",
-            "named": true
-          }
-        ]
-      },
-      "msb": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "constant_expression",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "simple_type",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
+        },
         {
-          "type": "integer_type",
+          "type": "cast_type",
+          "named": true
+        },
+        {
+          "type": "cast_width",
+          "named": true
+        },
+        {
+          "type": "concatenate",
+          "named": true
+        },
+        {
+          "type": "enum_literal",
+          "named": true
+        },
+        {
+          "type": "instance_ref",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "onreadtype_literal",
+          "named": true
+        },
+        {
+          "type": "onwritetype_literal",
+          "named": true
+        },
+        {
+          "type": "paren_expr",
+          "named": true
+        },
+        {
+          "type": "precedencetype_literal",
+          "named": true
+        },
+        {
+          "type": "prop_ref",
+          "named": true
+        },
+        {
+          "type": "replicate",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "ternary_expr",
+          "named": true
+        },
+        {
+          "type": "unary_expr",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "source_file",
+    "type": "root",
     "named": true,
     "root": true,
     "fields": {},
@@ -1545,21 +3194,65 @@
       "required": false,
       "types": [
         {
-          "type": "description",
+          "type": "component_def",
+          "named": true
+        },
+        {
+          "type": "constraint_def",
+          "named": true
+        },
+        {
+          "type": "dynamic_property_assignment",
+          "named": true
+        },
+        {
+          "type": "enum_def",
+          "named": true
+        },
+        {
+          "type": "explicit_component_inst",
+          "named": true
+        },
+        {
+          "type": "local_property_assignment",
+          "named": true
+        },
+        {
+          "type": "struct_def",
+          "named": true
+        },
+        {
+          "type": "udp_def",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "string_literal",
+    "type": "struct_def",
     "named": true,
-    "fields": {}
-  },
-  {
-    "type": "struct_body",
-    "named": true,
-    "fields": {},
+    "fields": {
+      "base": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "id",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "id",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
       "required": false,
@@ -1572,93 +3265,28 @@
     }
   },
   {
-    "type": "struct_def",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "id",
-          "named": true
-        },
-        {
-          "type": "struct_body",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "struct_elem",
     "named": true,
-    "fields": {},
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "id",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
       "required": true,
       "types": [
         {
-          "type": "array_type",
+          "type": "array_type_suffix",
           "named": true
         },
-        {
-          "type": "id",
-          "named": true
-        },
-        {
-          "type": "struct_type",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "struct_literal",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "id",
-          "named": true
-        },
-        {
-          "type": "struct_literal_elem",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "struct_literal_elem",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "constant_expression",
-          "named": true
-        },
-        {
-          "type": "id",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "struct_type",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
         {
           "type": "component_type",
           "named": true
@@ -1671,9 +3299,752 @@
     }
   },
   {
-    "type": "unary_operator",
+    "type": "struct_kv",
+    "named": true,
+    "fields": {
+      "member": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "id",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "accesstype_literal",
+          "named": true
+        },
+        {
+          "type": "addressingtype_literal",
+          "named": true
+        },
+        {
+          "type": "array_literal",
+          "named": true
+        },
+        {
+          "type": "binary_expr",
+          "named": true
+        },
+        {
+          "type": "boolean_literal",
+          "named": true
+        },
+        {
+          "type": "cast_type",
+          "named": true
+        },
+        {
+          "type": "cast_width",
+          "named": true
+        },
+        {
+          "type": "concatenate",
+          "named": true
+        },
+        {
+          "type": "enum_literal",
+          "named": true
+        },
+        {
+          "type": "instance_ref",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "onreadtype_literal",
+          "named": true
+        },
+        {
+          "type": "onwritetype_literal",
+          "named": true
+        },
+        {
+          "type": "paren_expr",
+          "named": true
+        },
+        {
+          "type": "precedencetype_literal",
+          "named": true
+        },
+        {
+          "type": "prop_ref",
+          "named": true
+        },
+        {
+          "type": "replicate",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "ternary_expr",
+          "named": true
+        },
+        {
+          "type": "unary_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "struct_literal",
+    "named": true,
+    "fields": {
+      "type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "id",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "struct_kv",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "ternary_expr",
+    "named": true,
+    "fields": {
+      "alternative": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "accesstype_literal",
+            "named": true
+          },
+          {
+            "type": "addressingtype_literal",
+            "named": true
+          },
+          {
+            "type": "array_literal",
+            "named": true
+          },
+          {
+            "type": "binary_expr",
+            "named": true
+          },
+          {
+            "type": "boolean_literal",
+            "named": true
+          },
+          {
+            "type": "cast_type",
+            "named": true
+          },
+          {
+            "type": "cast_width",
+            "named": true
+          },
+          {
+            "type": "concatenate",
+            "named": true
+          },
+          {
+            "type": "enum_literal",
+            "named": true
+          },
+          {
+            "type": "instance_ref",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "onreadtype_literal",
+            "named": true
+          },
+          {
+            "type": "onwritetype_literal",
+            "named": true
+          },
+          {
+            "type": "paren_expr",
+            "named": true
+          },
+          {
+            "type": "precedencetype_literal",
+            "named": true
+          },
+          {
+            "type": "prop_ref",
+            "named": true
+          },
+          {
+            "type": "replicate",
+            "named": true
+          },
+          {
+            "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "struct_literal",
+            "named": true
+          },
+          {
+            "type": "ternary_expr",
+            "named": true
+          },
+          {
+            "type": "unary_expr",
+            "named": true
+          }
+        ]
+      },
+      "condition": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "accesstype_literal",
+            "named": true
+          },
+          {
+            "type": "addressingtype_literal",
+            "named": true
+          },
+          {
+            "type": "array_literal",
+            "named": true
+          },
+          {
+            "type": "binary_expr",
+            "named": true
+          },
+          {
+            "type": "boolean_literal",
+            "named": true
+          },
+          {
+            "type": "cast_type",
+            "named": true
+          },
+          {
+            "type": "cast_width",
+            "named": true
+          },
+          {
+            "type": "concatenate",
+            "named": true
+          },
+          {
+            "type": "enum_literal",
+            "named": true
+          },
+          {
+            "type": "instance_ref",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "onreadtype_literal",
+            "named": true
+          },
+          {
+            "type": "onwritetype_literal",
+            "named": true
+          },
+          {
+            "type": "paren_expr",
+            "named": true
+          },
+          {
+            "type": "precedencetype_literal",
+            "named": true
+          },
+          {
+            "type": "prop_ref",
+            "named": true
+          },
+          {
+            "type": "replicate",
+            "named": true
+          },
+          {
+            "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "struct_literal",
+            "named": true
+          },
+          {
+            "type": "ternary_expr",
+            "named": true
+          },
+          {
+            "type": "unary_expr",
+            "named": true
+          }
+        ]
+      },
+      "consequence": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "accesstype_literal",
+            "named": true
+          },
+          {
+            "type": "addressingtype_literal",
+            "named": true
+          },
+          {
+            "type": "array_literal",
+            "named": true
+          },
+          {
+            "type": "binary_expr",
+            "named": true
+          },
+          {
+            "type": "boolean_literal",
+            "named": true
+          },
+          {
+            "type": "cast_type",
+            "named": true
+          },
+          {
+            "type": "cast_width",
+            "named": true
+          },
+          {
+            "type": "concatenate",
+            "named": true
+          },
+          {
+            "type": "enum_literal",
+            "named": true
+          },
+          {
+            "type": "instance_ref",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "onreadtype_literal",
+            "named": true
+          },
+          {
+            "type": "onwritetype_literal",
+            "named": true
+          },
+          {
+            "type": "paren_expr",
+            "named": true
+          },
+          {
+            "type": "precedencetype_literal",
+            "named": true
+          },
+          {
+            "type": "prop_ref",
+            "named": true
+          },
+          {
+            "type": "replicate",
+            "named": true
+          },
+          {
+            "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "struct_literal",
+            "named": true
+          },
+          {
+            "type": "ternary_expr",
+            "named": true
+          },
+          {
+            "type": "unary_expr",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "udp_comp_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "component_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "udp_constraint",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": "udp_data_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "basic_data_type",
+          "named": true
+        },
+        {
+          "type": "component_type_primary",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "udp_def",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "id",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "udp_constraint",
+          "named": true
+        },
+        {
+          "type": "udp_default",
+          "named": true
+        },
+        {
+          "type": "udp_type",
+          "named": true
+        },
+        {
+          "type": "udp_usage",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "udp_default",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "accesstype_literal",
+          "named": true
+        },
+        {
+          "type": "addressingtype_literal",
+          "named": true
+        },
+        {
+          "type": "array_literal",
+          "named": true
+        },
+        {
+          "type": "binary_expr",
+          "named": true
+        },
+        {
+          "type": "boolean_literal",
+          "named": true
+        },
+        {
+          "type": "cast_type",
+          "named": true
+        },
+        {
+          "type": "cast_width",
+          "named": true
+        },
+        {
+          "type": "concatenate",
+          "named": true
+        },
+        {
+          "type": "enum_literal",
+          "named": true
+        },
+        {
+          "type": "instance_ref",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "onreadtype_literal",
+          "named": true
+        },
+        {
+          "type": "onwritetype_literal",
+          "named": true
+        },
+        {
+          "type": "paren_expr",
+          "named": true
+        },
+        {
+          "type": "precedencetype_literal",
+          "named": true
+        },
+        {
+          "type": "prop_ref",
+          "named": true
+        },
+        {
+          "type": "replicate",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "ternary_expr",
+          "named": true
+        },
+        {
+          "type": "unary_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "udp_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "array_type_suffix",
+          "named": true
+        },
+        {
+          "type": "udp_data_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "udp_usage",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "udp_comp_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "unary_expr",
+    "named": true,
+    "fields": {
+      "operand": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "accesstype_literal",
+            "named": true
+          },
+          {
+            "type": "addressingtype_literal",
+            "named": true
+          },
+          {
+            "type": "array_literal",
+            "named": true
+          },
+          {
+            "type": "boolean_literal",
+            "named": true
+          },
+          {
+            "type": "cast_type",
+            "named": true
+          },
+          {
+            "type": "cast_width",
+            "named": true
+          },
+          {
+            "type": "concatenate",
+            "named": true
+          },
+          {
+            "type": "enum_literal",
+            "named": true
+          },
+          {
+            "type": "instance_ref",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "onreadtype_literal",
+            "named": true
+          },
+          {
+            "type": "onwritetype_literal",
+            "named": true
+          },
+          {
+            "type": "paren_expr",
+            "named": true
+          },
+          {
+            "type": "precedencetype_literal",
+            "named": true
+          },
+          {
+            "type": "prop_ref",
+            "named": true
+          },
+          {
+            "type": "replicate",
+            "named": true
+          },
+          {
+            "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "struct_literal",
+            "named": true
+          }
+        ]
+      },
+      "operator": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "!",
+            "named": false
+          },
+          {
+            "type": "&",
+            "named": false
+          },
+          {
+            "type": "+",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          },
+          {
+            "type": "^",
+            "named": false
+          },
+          {
+            "type": "^~",
+            "named": false
+          },
+          {
+            "type": "|",
+            "named": false
+          },
+          {
+            "type": "~",
+            "named": false
+          },
+          {
+            "type": "~&",
+            "named": false
+          },
+          {
+            "type": "~^",
+            "named": false
+          },
+          {
+            "type": "~|",
+            "named": false
+          }
+        ]
+      }
+    }
   },
   {
     "type": "!",
@@ -1681,10 +4052,6 @@
   },
   {
     "type": "!=",
-    "named": false
-  },
-  {
-    "type": "\"",
     "named": false
   },
   {
@@ -1709,10 +4076,6 @@
   },
   {
     "type": "'",
-    "named": false
-  },
-  {
-    "type": "'{",
     "named": false
   },
   {
@@ -1852,6 +4215,14 @@
     "named": false
   },
   {
+    "type": "alternate",
+    "named": false
+  },
+  {
+    "type": "bit",
+    "named": false
+  },
+  {
     "type": "boolean",
     "named": false
   },
@@ -1860,7 +4231,7 @@
     "named": false
   },
   {
-    "type": "clr",
+    "type": "byte",
     "named": false
   },
   {
@@ -1874,6 +4245,10 @@
   },
   {
     "type": "component",
+    "named": false
+  },
+  {
+    "type": "componentwidth",
     "named": false
   },
   {
@@ -1921,12 +4296,8 @@
     "named": false
   },
   {
-    "type": "integer_atom_type",
-    "named": true
-  },
-  {
-    "type": "integer_vector_type",
-    "named": true
+    "type": "int",
+    "named": false
   },
   {
     "type": "internal",
@@ -1934,6 +4305,10 @@
   },
   {
     "type": "level",
+    "named": false
+  },
+  {
+    "type": "longint",
     "named": false
   },
   {
@@ -1973,12 +4348,12 @@
     "named": false
   },
   {
-    "type": "property",
+    "type": "precedencetype",
     "named": false
   },
   {
-    "type": "property_constraint_type",
-    "named": true
+    "type": "property",
+    "named": false
   },
   {
     "type": "r",
@@ -1986,6 +4361,10 @@
   },
   {
     "type": "rclr",
+    "named": false
+  },
+  {
+    "type": "real",
     "named": false
   },
   {
@@ -2021,16 +4400,28 @@
     "named": false
   },
   {
+    "type": "shortint",
+    "named": false
+  },
+  {
+    "type": "shortreal",
+    "named": false
+  },
+  {
     "type": "signal",
     "named": false
   },
   {
-    "type": "signing",
-    "named": true
+    "type": "signed",
+    "named": false
   },
   {
     "type": "string",
     "named": false
+  },
+  {
+    "type": "string_literal",
+    "named": true
   },
   {
     "type": "struct",
@@ -2053,6 +4444,10 @@
     "named": false
   },
   {
+    "type": "unsigned",
+    "named": false
+  },
+  {
     "type": "w",
     "named": false
   },
@@ -2062,6 +4457,14 @@
   },
   {
     "type": "wclr",
+    "named": false
+  },
+  {
+    "type": "with",
+    "named": false
+  },
+  {
+    "type": "within",
     "named": false
   },
   {

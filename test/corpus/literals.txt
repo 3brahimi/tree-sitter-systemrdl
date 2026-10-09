@@ -1,0 +1,124 @@
+================================================================================
+Numbers with underscores and Verilog-style widths
+================================================================================
+
+addrmap top { reg_t r0 @ 0x80_000; p = 1_000 + 8'b1010_1010 + 16'd65_535 + 8'hFF; };
+
+--------------------------------------------------------------------------------
+
+(root
+  (component_def
+    (component_named_def
+      (component_type
+        (component_type_primary))
+      (id)
+      (component_body
+        (explicit_component_inst
+          (id)
+          (component_insts
+            (component_inst
+              (id)
+              (inst_addr_fixed
+                (number)))))
+        (local_property_assignment
+          (normal_prop_assign
+            (id)
+            (binary_expr
+              (binary_expr
+                (binary_expr
+                  (number)
+                  (number))
+                (number))
+              (number))))))))
+
+================================================================================
+Strings escape only quote and backslash
+================================================================================
+
+addrmap top { desc = "say \"hi\" \\ done"; name = "line one
+line two"; };
+
+--------------------------------------------------------------------------------
+
+(root
+  (component_def
+    (component_named_def
+      (component_type
+        (component_type_primary))
+      (id)
+      (component_body
+        (local_property_assignment
+          (normal_prop_assign
+            (id)
+            (string_literal)))
+        (local_property_assignment
+          (normal_prop_assign
+            (id)
+            (string_literal)))))))
+
+================================================================================
+Enumerated literals
+================================================================================
+
+addrmap top { p1 = rclr; p2 = woclr; p3 = regalign; p4 = hw; p5 = my_enum::val; };
+
+--------------------------------------------------------------------------------
+
+(root
+  (component_def
+    (component_named_def
+      (component_type
+        (component_type_primary))
+      (id)
+      (component_body
+        (local_property_assignment
+          (normal_prop_assign
+            (id)
+            (onreadtype_literal)))
+        (local_property_assignment
+          (normal_prop_assign
+            (id)
+            (onwritetype_literal)))
+        (local_property_assignment
+          (normal_prop_assign
+            (id)
+            (addressingtype_literal)))
+        (local_property_assignment
+          (normal_prop_assign
+            (id)
+            (precedencetype_literal)))
+        (local_property_assignment
+          (normal_prop_assign
+            (id)
+            (enum_literal
+              (id)
+              (id))))))))
+
+================================================================================
+Struct and array literals
+================================================================================
+
+addrmap top { p = s'{a: 1, b: '{1, 2}}; };
+
+--------------------------------------------------------------------------------
+
+(root
+  (component_def
+    (component_named_def
+      (component_type
+        (component_type_primary))
+      (id)
+      (component_body
+        (local_property_assignment
+          (normal_prop_assign
+            (id)
+            (struct_literal
+              (id)
+              (struct_kv
+                (id)
+                (number))
+              (struct_kv
+                (id)
+                (array_literal
+                  (number)
+                  (number))))))))))
