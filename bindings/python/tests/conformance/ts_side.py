@@ -13,6 +13,9 @@ from .tree_shape import Shape
 #: Named nodes that are tokens in ANTLR (no rule context of their own).
 TOKEN_NODES = frozenset({"id", "comment"})
 
+#: Nodes built from several tree-sitter tokens that ANTLR lexes as one token.
+SINGLE_TOKEN_NODES = frozenset({"string_literal"})
+
 
 @dataclass(frozen=True)
 class TsResult:
@@ -46,7 +49,7 @@ def _children(node: Node) -> tuple[Shape, ...]:
 def _leaves(node: Node, source: bytes):
     if node.type == "comment":
         return
-    if node.child_count == 0:
+    if node.child_count == 0 or node.type in SINGLE_TOKEN_NODES:
         if node.end_byte > node.start_byte:
             yield source[node.start_byte:node.end_byte].decode()
         return

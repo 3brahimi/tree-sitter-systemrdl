@@ -465,9 +465,22 @@ export default grammar({
         ),
       ),
 
-    // STRING: only \" and \\ are escapes; any other character is literal.
+    // STRING: only \" and \\ are escapes; a backslash before any other
+    // character is an error, as in SystemRDL.g4. The pieces are immediate
+    // tokens, not one big token, so an unclosed quote stays a local error
+    // instead of pairing with a later `"` and flipping the rest of the file.
     string_literal: (_) =>
-      token(seq('"', repeat(choice(/[^"\\]/, '\\"', "\\\\")), '"')),
+      seq(
+        '"',
+        repeat(
+          choice(
+            token.immediate(prec(1, /[^"\\]+/)),
+            token.immediate('\\"'),
+            token.immediate("\\\\"),
+          ),
+        ),
+        token.immediate('"'),
+      ),
 
     boolean_literal: (_) => choice("true", "false"),
 
